@@ -1,0 +1,12 @@
+<div>
+  <h1>Counter 2</h1>
+  <h3>Global Count: {{ globalCount$ | async }}</h3>
+  <button (click)="increment()">Increment</button>
+  <button (click)="decrement()">Decrement</button>
+  <button (click)="reset()">Reset</button>
+  <h3>Local Count: {{ localCount() }}</h3>
+  <button (click)="incrementLocal()">Increment Local</button>
+  <button (click)="decrementLocal()">Decrement Local</button>
+  <button (click)="resetLocal()">Reset Local</button>
+  <button (click)="setLocalToGlobal()">Set Local to Global</button>
+</div>
