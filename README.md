@@ -1,27 +1,26 @@
-# NgrxLearn
+# Ngrx Learning Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.3.
+## Purpose
 
-## Development server
+這個專案主要是將 Angular 的 Ngrx 學習筆記整理成一個專案,
+且結合 Angular 17 Core 新增的 Signals 來實作一個簡單切換 Component 的網頁.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Ngrx
 
-## Code scaffolding
+Ngrx 是 Angular 的狀態管理工具,
+透過 Ngrx 我們可以將 Component 的狀態集中管理,
+並且透過 Actions 來觸發 Reducers 來改變狀態,
+透過 Selectors 來取得狀態.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Signals
 
-## Build
+Signals 是 Angular 17 Core 新增的功能,
+适合小型或中型应用的局部状态管理.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Upcoming features
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [x] 使用 ngrx props
+- [x] 使用 ngrx createActionGroup
+- [x] toSignal()
+- [x] toSignal() 且 computed()
+- [ ] 使用 ngrx effect()
