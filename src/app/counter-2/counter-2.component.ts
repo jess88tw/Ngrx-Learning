@@ -1,12 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, signal } from '@angular/core';
 import { Store } from '@ngrx/store';
-import {
-  decrement,
-  increment,
-  reset,
-  setCount,
-} from '../state/counter.actions';
+import { CounterActions } from '../state/counter.actions';
 import { CounterState } from '../state/counter.reducer';
 import { selectCount } from '../state/counter.selectors';
 
@@ -24,15 +19,15 @@ export class Counter2Component {
   localCount = signal(0);
 
   increment() {
-    this.store.dispatch(increment());
+    this.store.dispatch(CounterActions.increment());
   }
 
   decrement() {
-    this.store.dispatch(decrement());
+    this.store.dispatch(CounterActions.decrement());
   }
 
   reset() {
-    this.store.dispatch(reset());
+    this.store.dispatch(CounterActions.reset());
   }
 
   incrementLocal() {
@@ -48,6 +43,6 @@ export class Counter2Component {
   }
 
   setLocalToGlobal() {
-    this.store.dispatch(setCount({ count: this.localCount() }));
+    this.store.dispatch(CounterActions.setCount({ count: this.localCount() }));
   }
 }
